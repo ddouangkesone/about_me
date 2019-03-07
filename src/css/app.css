@@ -1,0 +1,271 @@
+@import "tachyons";
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+.footer-top a {
+  color: black;
+}
+
+.footer-top a:hover {
+  color: #d0e3dc;
+}
+
+body {
+  background: url(https://i.imgur.com/TDbyJIn.jpg) no-repeat center center fixed; 
+  font-family: Staatliches;
+}
+
+/* .name {
+  background-color: #ebeae5;
+} */
+
+.washed-green-o2 {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom {
+  height: 15%;
+}
+
+.footer-top {
+  height: 85%;
+  padding-top: 100px;
+}
+
+.staatliches {
+  font-family: Staatliches;
+}
+
+.pacifico {
+  font-family: Pacifico;
+}
+
+.permanent-marker {
+  font-family: Permanent Marker;
+}
+
+.meter { 
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background: #555;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 10px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43,194,83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-media:hover {
+  color: #d0e3dc;
+  transition: color, .4s;
+}
+
+/*
+    ANIMATE
+    Base:
+        a = animation duration
+        d = animation delay
+    Modifiers
+        1 = 1st step in width scale
+        2 = 2nd step in width scale
+        3 = 3rd step in width scale
+        4 = 4th step in width scale
+        5 = 5th step in width scale
+        -1 = literal value 1s
+        -2 = literal value 2s
+        -3 = literal value 3s
+    Media Query Extensions:
+        -ns = not-small
+        -m  = medium
+        -l  = large
+*/
+/* Animation Play State */
+.pause { -webkit-animation-play-state: paused; animation-play-state: paused; }
+/* Animation Iteration */
+.infinite { -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
+.double { -webkit-animation-iteration-count: 2; animation-iteration-count: 2; }
+.triple { -webkit-animation-iteration-count: 3; animation-iteration-count: 3; }
+/* Animation Direction */
+.reverse { -webkit-animation-direction: reverse; animation-direction: reverse; }
+.alternate { -webkit-animation-direction: alternate; animation-direction: alternate; }
+.alternate-reverse { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; }
+/* Animation Duration */
+.a1 { -webkit-animation-duration: 150ms; animation-duration: 150ms; }
+.a2 { -webkit-animation-duration: 300ms; animation-duration: 300ms; }
+.a3 { -webkit-animation-duration: 450ms; animation-duration: 450ms; }
+.a4 { -webkit-animation-duration: 600ms; animation-duration: 600ms; }
+.a5 { -webkit-animation-duration: 750ms; animation-duration: 750ms; }
+.a6 { -webkit-animation-duration: 900ms; animation-duration: 900ms; }
+.a-1 { -webkit-animation-duration: 1s; animation-duration: 1s; }
+.a-2 { -webkit-animation-duration: 2s; animation-duration: 2s; }
+.a-3 { -webkit-animation-duration: 3s; animation-duration: 3s; }
+/* Animation Delay */
+.d1 { -webkit-animation-delay: 150ms; animation-delay: 150ms; }
+.d2 { -webkit-animation-delay: 300ms; animation-delay: 300ms; }
+.d3 { -webkit-animation-delay: 450ms; animation-delay: 450ms; }
+.d4 { -webkit-animation-delay: 600ms; animation-delay: 600ms; }
+.d5 { -webkit-animation-delay: 750ms; animation-delay: 750ms; }
+.d6 { -webkit-animation-delay: 900ms; animation-delay: 900ms; }
+.d-1 { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.d-2 { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.d-3 { -webkit-animation-delay: 3s; animation-delay: 3s; }
+/* EASING BEZIER CURVES via https://gist.github.com/bendc/ac03faac0bf2aee25b49e5fd260a727d */
+.ease { -webkit-animation-timing-function: ease; animation-timing-function: ease; }
+.ease-in { -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; }
+.ease-in-quad { -webkit-animation-timing-function: cubic-bezier( .55, .085, .68, .53 ); animation-timing-function: cubic-bezier( .55, .085, .68, .53 ); }
+.ease-in-cubic { -webkit-animation-timing-function: cubic-bezier( .550, .055, .675, .19 ); animation-timing-function: cubic-bezier( .550, .055, .675, .19 ); }
+.ease-in-quart { -webkit-animation-timing-function: cubic-bezier( .895, .03, .685, .22 ); animation-timing-function: cubic-bezier( .895, .03, .685, .22 ); }
+.ease-in-quint { -webkit-animation-timing-function: cubic-bezier( .755, .05, .855, .06 ); animation-timing-function: cubic-bezier( .755, .05, .855, .06 ); }
+.ease-in-expo { -webkit-animation-timing-function: cubic-bezier( .95, .05, .795, .035 ); animation-timing-function: cubic-bezier( .95, .05, .795, .035 ); }
+.ease-in-circ { -webkit-animation-timing-function: cubic-bezier( .6, .04, .98, .335 ); animation-timing-function: cubic-bezier( .6, .04, .98, .335 ); }
+.ease-out { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
+.ease-out-quad { -webkit-animation-timing-function: cubic-bezier( .25, .46, .45, .94 ); animation-timing-function: cubic-bezier( .25, .46, .45, .94 ); }
+.ease-out-cubic { -webkit-animation-timing-function: cubic-bezier( .215, .61, .355, 1 ); animation-timing-function: cubic-bezier( .215, .61, .355, 1 ); }
+.ease-out-quart { -webkit-animation-timing-function: cubic-bezier( .165, .84, .44, 1 ); animation-timing-function: cubic-bezier( .165, .84, .44, 1 ); }
+.ease-out-quint { -webkit-animation-timing-function: cubic-bezier( .23, 1, .32, 1 ); animation-timing-function: cubic-bezier( .23, 1, .32, 1 ); }
+.ease-out-expo { -webkit-animation-timing-function: cubic-bezier( .19, 1, .22, 1 ); animation-timing-function: cubic-bezier( .19, 1, .22, 1 ); }
+.ease-out-circ { -webkit-animation-timing-function: cubic-bezier( .075, .82, .165, 1 ); animation-timing-function: cubic-bezier( .075, .82, .165, 1 ); }
+.ease-in-out { -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; }
+.ease-in-out-quad { -webkit-animation-timing-function: cubic-bezier( .455, .03, .515, .955 ); animation-timing-function: cubic-bezier( .455, .03, .515, .955 ); }
+.ease-in-out-cubic { -webkit-animation-timing-function: cubic-bezier( .645, .045, .355, 1 ); animation-timing-function: cubic-bezier( .645, .045, .355, 1 ); }
+.ease-in-out-quart { -webkit-animation-timing-function: cubic-bezier( .77, 0, .175, 1 ); animation-timing-function: cubic-bezier( .77, 0, .175, 1 ); }
+.ease-in-out-quint { -webkit-animation-timing-function: cubic-bezier( .86, 0, .07, 1 ); animation-timing-function: cubic-bezier( .86, 0, .07, 1 ); }
+.ease-in-out-expo { -webkit-animation-timing-function: cubic-bezier( 1, 0, 0, 1 ); animation-timing-function: cubic-bezier( 1, 0, 0, 1 ); }
+.ease-in-out-circ { -webkit-animation-timing-function: cubic-bezier( .785, .135, .15, .86 ); animation-timing-function: cubic-bezier( .785, .135, .15, .86 ); }
+
+
+.fade-in {
+  animation: fadeIn ease .5s;
+  -webkit-animation: fadeIn ease .5s;
+  -moz-animation: fadeIn ease .5s;
+  -o-animation: fadeIn ease .5s;
+  -ms-animation: fadeIn ease .5s;
+}
+
+.nav-fade-in {
+  animation: fadeIn ease 1.5s;
+  -webkit-animation: fadeIn ease 1.5s;
+  -moz-animation: fadeIn ease 1.5s;
+  -o-animation: fadeIn ease 1.5s;
+  -ms-animation: fadeIn ease 1.5s;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  animation: fadeOut ease .5s;
+  -webkit-animation: fadeOut ease .5s;
+  -moz-animation: fadeOut ease .5s;
+  -o-animation: fadeOut ease .5s;
+  -ms-animation: fadeOut ease .5s;
+}
+
+@keyframes fadeOut{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
