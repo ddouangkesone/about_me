@@ -15,7 +15,8 @@ class App extends Component {
       modalImage: '',
       introVisible: true,
       removeIntro: false,
-      navShadow: true
+      navShadow: true,
+      initialLoad: false
     }
     this.handleModal = this.handleModal.bind(this)
     this.escFunction = this.escFunction.bind(this)
@@ -40,6 +41,7 @@ class App extends Component {
         this.setState({removeIntro: true})
       }
     })
+    this.setState({initialLoad: true})
   }
 
   handleModal(modalImage) {
@@ -54,14 +56,14 @@ class App extends Component {
   }
 
   render() {
-    const { modalOpen, modalImage, introVisible, removeIntro, navShadow } = this.state
+    const { modalOpen, modalImage, introVisible, removeIntro, navShadow, initialLoad = false } = this.state
     const { 
       name = '',
       sections = [],
       skills = [],
       social_media = []
       } = DanielDouangkesone
-      
+
     const recentWork = sections.map((element, index) => {
       return <RecentWorkThumbnails key={index} content={element} handleModal={this.handleModal} index={index} />
       })
@@ -76,33 +78,34 @@ class App extends Component {
       <div className="App">
         { modalOpen ? <Modal image={modalImage} handleModal={this.handleModal} /> : null }
         <div className="background-landscape"></div>
-          {!removeIntro ? <div className={`fixed top-0 vh-100 flex items-center ph4 white ${introVisible ? 'fade-in' : 'fade-out'}`}>
-            <span>
-              <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.
-              </h2>
-            </span>
+          {!removeIntro ? <div className={`fixed top-0 h-100 w-100 flex items-center ph5 white ${introVisible ? 'fade-in' : 'fade-out'}`}>
+            <div className="dtc v-mid tc white ph3 ph4-l w-100 pacifico">
+              <h1>
+                Welcome to my portfolio site
+              </h1>
+              <p className="josefin">
+              Scroll down for more content
+              </p>
+            </div>
           </div> : null}
-        <div className={`pacifico ph5-l ph3 z-1 fixed top-0 w-100 tc name pt3 ${navShadow ? 'shadow-3' : ''} black bg-washed-green ${introVisible ? 'fade-out' : 'nav-fade-in'}`}>
-          <h2 className="mb3 mt0 f-subheadline-l f1-m f2">
-            {name}
-          </h2>
-          <SocialMedia content={social_media} />  
-        </div>
+          {
+            !initialLoad ?
+             null : <div className={`pacifico ph5-l ph3 z-1 fixed top-0 w-100 tc name pt3 ${navShadow ? 'shadow-3' : ''} black bg-washed-green ${introVisible ? 'fade-out' : 'nav-fade-in'}`}>
+             <h2 className="mb3 mt0 f-subheadline-l f1-m f2">
+               {name}
+             </h2>
+             <SocialMedia content={social_media} />  
+           </div>
+          }
+        
         <div className="w-100 w-50-l vh-100 spacer"></div>
         <div className="w-100 w-50-l fr tc ph4 washed-green-o2">
           <div className="hello vh-75 flex flex-column justify-center f4">
-            <h1 className="pacifico mb4">Hello</h1>
+            <h1 className="pacifico mb4">About Me</h1>
             <span>
               I'm a web designer / developer based out of Austin, Tx. I started taking freelance design jobs and
-              naturally progressed into web development. I love aspects of both fields, and enjoy building sites from
-              start to finish. I am available for work - if you would like to build something -
+              naturally progressed into web development. Making beautiful smart websites is my pride and passion.
             </span>
-            <a href="www.google.com">Get in Touch</a>
           </div>
           <ScrollTrigger onEnter={() => {this.setState({removeIntro: true})}} />
           {recentWork}
@@ -123,7 +126,7 @@ class App extends Component {
               <div>
                 <h3 className="mb0">Get in touch</h3>
                 <br />
-                <a href="mailto:ddouangkesone@gmail.com">send me an email</a>
+                <a href="mailto:ddouangkesone@gmail.com">Send me an email</a>
                 <br />
                 <a href="https://docs.google.com/document/d/1K3PVDp56NUnAAbeOxBvs3NfLMDc8aZNaMvqoTF3zq1M/edit">Check out my resume</a>
               </div>

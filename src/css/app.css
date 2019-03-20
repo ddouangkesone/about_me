@@ -1,6 +1,5 @@
 @import "tachyons";
-@import url('https://fonts.googleapis.com/css?family=Staatliches|Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico');
 
 .footer-top a {
   color: black;
@@ -12,12 +11,8 @@
 
 body {
   background: url(https://i.imgur.com/TDbyJIn.jpg) no-repeat center center fixed; 
-  font-family: Staatliches;
+  font-family: 'Josefin Sans', sans-serif;
 }
-
-/* .name {
-  background-color: #ebeae5;
-} */
 
 .washed-green-o2 {
   background-color: rgba(255, 255, 255, 0.4);
@@ -32,16 +27,12 @@ body {
   padding-top: 100px;
 }
 
-.staatliches {
-  font-family: Staatliches;
-}
-
 .pacifico {
   font-family: Pacifico;
 }
 
-.permanent-marker {
-  font-family: Permanent Marker;
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .meter { 

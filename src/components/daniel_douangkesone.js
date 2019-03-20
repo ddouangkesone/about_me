@@ -17,7 +17,7 @@ const DanielDouangkesone = {
       "percent": 90
     },
     {
-      "label": "css/scss",
+      "label": "Css/Scss",
       "percent": "90"
     },
     {
@@ -35,17 +35,17 @@ const DanielDouangkesone = {
       "fields": [
         {
           image: homecity,
-          label: 'homecity',
+          label: 'Homecity',
           link: 'https://www.homecity.com/'
         },
         {
           image: villa,
-          label: 'villa',
+          label: 'Villa',
           link: 'https://www.villarealestate.com/'
         },
         {
           image: vince,
-          label: 'vince',
+          label: 'Vince',
           link: 'https://vinceyoungrealty.com'
         }
       ]
@@ -55,23 +55,23 @@ const DanielDouangkesone = {
       "fields": [
         {
           "image": bodega,
-          "label": "bodega"
+          "label": "Bodega"
         },
         {
           "image": burn_alleycat,
-          "label": "burn"
+          "label": "Burn"
         },
         {
           "image": fast_fridays,
-          "label": "fast fridays"
+          "label": "Fast Fridays"
         },
         {
           "image": lost_pines,
-          "label": "lost pines"
+          "label": "Lost Pines"
         },
         {
           "image": the_farm,
-          "label": "farm"
+          "label": "Farm"
         }
       ]
     }
@@ -95,5 +95,7 @@ const DanielDouangkesone = {
     }
   ]
 }
+
+
 
 export default DanielDouangkesone
