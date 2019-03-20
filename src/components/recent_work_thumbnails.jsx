@@ -43,7 +43,7 @@ class RecentWorkThumbnails extends React.Component {
 
     return (
       <div className="recent-work pv5 mt3 flex flex-column mb4">
-        <div className="w-100 pacifico">
+        <div className="w-100 josefin">
           <h1>{label}</h1>
         </div>
         <ScrollTrigger className="mt2" onEnter={() => { this.setState({ inFocus: true }) }}>

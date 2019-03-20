@@ -101,7 +101,7 @@ class App extends Component {
         <div className="w-100 w-50-l vh-100 spacer"></div>
         <div className="w-100 w-50-l fr tc ph4 washed-green-o2">
           <div className="hello vh-75 flex flex-column justify-center f4">
-            <h1 className="pacifico mb4">About Me</h1>
+            <h1 className="josefin mb4">About Me</h1> 
             <span>
               I'm a web designer / developer based out of Austin, Tx. I started taking freelance design jobs and
               naturally progressed into web development. Making beautiful smart websites is my pride and passion.
@@ -110,7 +110,7 @@ class App extends Component {
           <ScrollTrigger onEnter={() => {this.setState({removeIntro: true})}} />
           {recentWork}
           <div className="skills flex flex-column vh-75 flex flex-column justify-center f4">
-            <div className="w-100 pacifico mb4">
+            <div className="w-100 josefin mb4">
               <h1>Related Skills</h1>
             </div>
             {skillslist}
