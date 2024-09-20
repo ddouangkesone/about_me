@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollTrigger from 'react-scroll-trigger';
+// import ScrollTrigger from 'react-scroll-trigger';
 
 class RecentWorkThumbnails extends React.Component {
   constructor(props) {
@@ -46,11 +46,11 @@ class RecentWorkThumbnails extends React.Component {
         <div className="w-100 josefin">
           <h1>{label}</h1>
         </div>
-        <ScrollTrigger className="mt2" onEnter={() => { this.setState({ inFocus: true }) }}>
+        {/* <ScrollTrigger className="mt2" onEnter={() => { this.setState({ inFocus: true }) }}> */}
           <div className="examples flex flex-wrap items-center flex-column-m flex-row-l f4">
             {inFocus ? thumbnails : null}
           </div>
-        </ScrollTrigger>
+        {/* </ScrollTrigger> */}
       </div>
     )
   }
