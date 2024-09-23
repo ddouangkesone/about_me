@@ -64,25 +64,25 @@ export default function App() {
     window.addEventListener('scroll', () => {
 
 
-      const { introVisible, removeIntro } = this.state
+      const { introVisible, removeIntro } = state
       const { pageYOffset } = window
       if (pageYOffset > 350 && introVisible) {
-        this.setState({ introVisible: false })
+        setState(prevState => ({ ...prevState, introVisible: false }))
       }
       else if (pageYOffset < 350 && !introVisible) {
-        this.setState({ introVisible: true, removeIntro: false })
+        setState(prevState => ({ ...prevState, introVisible: true, removeIntro: false }))
       }
       else if (pageYOffset > 400 && !removeIntro) {
-        this.setState({ removeIntro: true })
+        setState(prevState => ({ ...prevState, removeIntro: true }))
       }
     })
 
     // 
     setState((prevState) => ({ ...prevState, initialLoad: true }))
-  })
+  }, [])
 
   return (
-    <div className="app" id="app">
+    <div id="app">
       {modalOpen ? <Modal image={modalImage} handleModal={handleModal} /> : null}
       <div className="background-landscape"></div>
       {!removeIntro ? <div className={`fixed top-0 h-100 w-100 flex items-center ph5 white ${introVisible ? 'fade-in' : 'fade-out'}`}>
@@ -154,5 +154,3 @@ export default function App() {
     </div>
   )
 }
-
-// export default App;
