@@ -1,12 +1,12 @@
+import back from '../assets/back.png'
 import bodega from '../assets/bodega.jpg'
 import burn_alleycat from '../assets/burn_alleycat.png'
 import fast_fridays from '../assets/fast_fridays.png'
+import homecity from '../assets/homecity.jpg'
 import lost_pines from '../assets/lost_pines.jpg'
 import the_farm from '../assets/the_farm.jpg'
-import homecity from '../assets/homecity.jpg'
 import villa from '../assets/villa.jpg'
 import vince from '../assets/vince.jpg'
-import back from '../assets/back.png'
 
 const DanielDouangkesone = {
   "name": "Daniel Douangkesone",
