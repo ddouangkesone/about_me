@@ -16,7 +16,8 @@ export default function App() {
     navShadow: true,
     removeIntro: false,
   })
-  const { initialLoad,
+  const {
+    initialLoad,
     introVisible,
     modalImage,
     modalOpen,
@@ -60,31 +61,46 @@ export default function App() {
 
   useEffect(() => {
 
+    console.log({ initialLoad })
+
     // Added: Used to fade out intro text
     window.addEventListener('scroll', () => {
 
 
       const { introVisible, removeIntro } = state
       const { pageYOffset } = window
-      if (pageYOffset > 350 && introVisible) {
+
+      // This handles the show state of the welcome message initially. And if the user scrolls back up to the top 
+      if (pageYOffset < 350 && introVisible) {
+        setState(prevState => ({ ...prevState, introVisible: true }))
+      }
+
+      // This handles the fade out of the welcome message
+      else if (pageYOffset > 350 && introVisible) {
+        console.log(pageYOffset)
         setState(prevState => ({ ...prevState, introVisible: false }))
       }
-      else if (pageYOffset < 350 && !introVisible) {
-        setState(prevState => ({ ...prevState, introVisible: true, removeIntro: false }))
-      }
-      else if (pageYOffset > 400 && !removeIntro) {
-        setState(prevState => ({ ...prevState, removeIntro: true }))
-      }
+      // else if (pageYOffset > 400 && !removeIntro) {
+      //   setState(prevState => ({ ...prevState, removeIntro: true, introVisible: true }))
+      // }
     })
 
-    // 
-    setState((prevState) => ({ ...prevState, initialLoad: true }))
+    // This timeout allows for CSS to load before the intro text fades in
+    setTimeout(() => {
+      setState((prevState) => ({ ...prevState, initialLoad: true }))
+    }, 1000)
   }, [])
 
   return (
     <div id="app">
+
+      {/* Modal */}
       {modalOpen ? <Modal image={modalImage} handleModal={handleModal} /> : null}
-      <div className="background-landscape"></div>
+
+      {/* Background */}
+      <div className="background-landscape" />
+
+      {/* Welcome Message */}
       {!removeIntro ? <div className={`fixed top-0 h-100 w-100 flex items-center ph5 white ${introVisible ? 'fade-in' : 'fade-out'}`}>
         <div className="dtc v-mid tc white ph3 ph4-l w-100 pacifico">
           <h1>
@@ -95,17 +111,24 @@ export default function App() {
           </p>
         </div>
       </div> : null}
+
+      {/* Top Nav Bar */}
       {
-        !initialLoad ?
-          null : <div className={`pacifico ph5-l ph3 z-1 fixed top-0 w-100 tc name pt3 ${navShadow ? 'shadow-3' : ''} black bg-washed-green ${introVisible ? 'fade-out' : 'nav-fade-in'}`}>
+        initialLoad ?
+          <div
+            className={`pacifico ph5-l ph3 z-1 fixed top-0 w-100 tc name pt3 ${navShadow ? 'shadow-3' : ''} black bg-washed-green ${(introVisible) ? 'fade-out' : 'nav-fade-in'}`}
+          >
             <h2 className="mb3 mt0 f-subheadline-l f1-m f2">
               {name}
             </h2>
             <SocialMedia content={social_media} />
-          </div>
+          </div> : null
       }
 
+      {/* Spacer */}
       <div className="w-100 w-50-l vh-100 spacer"></div>
+
+      {/* Main Content */}
       <div className="w-100 w-50-l fr tc ph4 washed-green-o2">
         <div className="hello vh-75 flex flex-column justify-center f4">
           <h1 className="josefin mb4">About Me</h1>
@@ -123,6 +146,8 @@ export default function App() {
           {skillslist}
         </div>
       </div>
+
+      {/* Footer */}
       <footer className="w-100 pv4 tc fr bg-washed-green vh-100 relative">
         <div className="footer-top w-100 relative">
           <div className="absolute bottom-0 flex w-100 h-75 pt4">
