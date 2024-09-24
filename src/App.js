@@ -130,15 +130,21 @@ export default function App() {
 
       {/* Main Content */}
       <div className="w-100 w-50-l fr tc ph4 washed-green-o2">
+
+        {/* About Me */}
         <div className="hello vh-75 flex flex-column justify-center f4">
           <h1 className="josefin mb4">About Me</h1>
           <span>
-            I'm a web designer / developer based out of Austin, Tx. I started taking freelance design jobs and
+            I'm a front end dev based out of New York City. I started taking freelance design jobs and
             naturally progressed into web development. Making beautiful smart websites is my pride and passion.
           </span>
         </div>
+
+        {/* Recent Work */}
         {/* <ScrollTrigger onEnter={() => {this.setState({removeIntro: true})}} /> */}
         {recentWork}
+
+        {/* Skills */}
         <div className="skills flex flex-column vh-75 flex flex-column justify-center f4">
           <div className="w-100 josefin mb4">
             <h1>Related Skills</h1>
