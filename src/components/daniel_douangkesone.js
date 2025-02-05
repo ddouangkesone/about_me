@@ -51,7 +51,7 @@ const DanielDouangkesone = {
       ]
     },
     {
-      "label": "Recent Design Work",
+      "label": "Older Design Work",
       "fields": [
         {
           "image": bodega,
@@ -95,7 +95,5 @@ const DanielDouangkesone = {
     }
   ]
 }
-
-
 
 export default DanielDouangkesone
