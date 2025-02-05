@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import styled from 'styled-components'
-// import ScrollTrigger from 'react-scroll-trigger';
+import ScrollTrigger from 'react-scroll-trigger';
 import Percentage from './components/Percentage';
 import Modal from './components/Modal';
 import SocialMedia from './components/social_media'
@@ -9,7 +9,7 @@ import RecentWorkThumbnails from './components/recent_work_thumbnails';
 
 export default function App() {
   const [state, setState] = useState({
-    initialLoad: false,
+    showNavBar: false,
     introVisible: true,
     modalImage: '',
     modalOpen: false,
@@ -17,7 +17,7 @@ export default function App() {
     removeIntro: false,
   })
   const {
-    initialLoad,
+    showNavBar,
     introVisible,
     modalImage,
     modalOpen,
@@ -60,9 +60,6 @@ export default function App() {
   })
 
   useEffect(() => {
-
-    console.log({ initialLoad })
-
     // Added: Used to fade out intro text
     window.addEventListener('scroll', () => {
 
@@ -72,22 +69,26 @@ export default function App() {
 
       // This handles the show state of the welcome message initially. And if the user scrolls back up to the top 
       if (pageYOffset < 350 && introVisible) {
+        console.log("hit1")
         setState(prevState => ({ ...prevState, introVisible: true }))
       }
 
       // This handles the fade out of the welcome message
       else if (pageYOffset > 350 && introVisible) {
-        console.log(pageYOffset)
+        console.log('hit2')
         setState(prevState => ({ ...prevState, introVisible: false }))
       }
-      // else if (pageYOffset > 400 && !removeIntro) {
-      //   setState(prevState => ({ ...prevState, removeIntro: true, introVisible: true }))
-      // }
+      else if (pageYOffset < 350
+        // && !removeIntro
+      ) {
+        console.log("hit3")
+        setState(prevState => ({ ...prevState, removeIntro: false, introVisible: true }))
+      }
     })
 
     // This timeout allows for CSS to load before the intro text fades in
     setTimeout(() => {
-      setState((prevState) => ({ ...prevState, initialLoad: true }))
+      setState((prevState) => ({ ...prevState, showNavBar: true }))
     }, 1000)
   }, [])
 
@@ -114,7 +115,7 @@ export default function App() {
 
       {/* Top Nav Bar */}
       {
-        initialLoad ?
+        showNavBar ?
           <div
             className={`pacifico ph5-l ph3 z-1 fixed top-0 w-100 tc name pt3 ${navShadow ? 'shadow-3' : ''} black bg-washed-green ${(introVisible) ? 'fade-out' : 'nav-fade-in'}`}
           >
@@ -141,7 +142,7 @@ export default function App() {
         </div>
 
         {/* Recent Work */}
-        {/* <ScrollTrigger onEnter={() => {this.setState({removeIntro: true})}} /> */}
+        <ScrollTrigger onEnter={() => { setState(prevState => ({ ...prevState, removeIntro: true })) }} />
         {recentWork}
 
         {/* Skills */}
@@ -175,10 +176,10 @@ export default function App() {
             </div>
           </div>
           <div className="footer-bottom w-100">
-            {/* <ScrollTrigger
-              onEnter={() => {this.setState({navShadow: false})}}
-              onExit={() => {this.setState({navShadow: true})}}
-            /> */}
+            <ScrollTrigger
+              onEnter={() => { setState(prevState => ({ ...prevState, navShadow: false })) }}
+              onExit={() => { setState(prevState => ({ ...prevState, navShadow: true })) }}
+            />
           </div>
         </div>
       </footer>
