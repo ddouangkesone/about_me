@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import ScrollTrigger from 'react-scroll-trigger';
+import ScrollTrigger from 'react-scroll-trigger';
 // import { Line } from 'rc-progress';
 
 export default function Percentage(props) {
