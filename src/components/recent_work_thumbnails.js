@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import ScrollTrigger from 'react-scroll-trigger';
+import ScrollTrigger from 'react-scroll-trigger';
 
 export default function RecentWorkThumbnails(props) {
   const [state, setState] = useState({
@@ -41,11 +41,13 @@ export default function RecentWorkThumbnails(props) {
       <div className="w-100 josefin">
         <h1>{label}</h1>
       </div>
-      {/* <ScrollTrigger className="mt2" onEnter={() => { this.setState({ inFocus: true }) }}> */}
-      <div className="examples flex flex-wrap items-center flex-column-m flex-row-l f4">
-        {inFocus ? thumbnails : null}
-      </div>
-      {/* </ScrollTrigger> */}
+      <ScrollTrigger className="mt2" onEnter={() => {
+        setState(prevState => ({ ...prevState, inFocus: true }))
+      }}>
+        <div className="examples flex flex-wrap items-center flex-column-m flex-row-l f4">
+          {inFocus ? thumbnails : null}
+        </div>
+      </ScrollTrigger>
     </div>
   )
 }

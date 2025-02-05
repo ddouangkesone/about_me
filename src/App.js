@@ -60,29 +60,19 @@ export default function App() {
   })
 
   useEffect(() => {
-    // Added: Used to fade out intro text
+    // Added: Used to fade out intro text and top nav bar
     window.addEventListener('scroll', () => {
-
-
       const { introVisible, removeIntro } = state
       const { pageYOffset } = window
 
       // This handles the show state of the welcome message initially. And if the user scrolls back up to the top 
       if (pageYOffset < 350 && introVisible) {
-        console.log("hit1")
-        setState(prevState => ({ ...prevState, introVisible: true }))
+        setState(prevState => ({ ...prevState, introVisible: true, removeIntro: false }))
       }
 
       // This handles the fade out of the welcome message
       else if (pageYOffset > 350 && introVisible) {
-        console.log('hit2')
         setState(prevState => ({ ...prevState, introVisible: false }))
-      }
-      else if (pageYOffset < 350
-        // && !removeIntro
-      ) {
-        console.log("hit3")
-        setState(prevState => ({ ...prevState, removeIntro: false, introVisible: true }))
       }
     })
 
@@ -142,7 +132,15 @@ export default function App() {
         </div>
 
         {/* Recent Work */}
-        <ScrollTrigger onEnter={() => { setState(prevState => ({ ...prevState, removeIntro: true })) }} />
+
+        {/* This ScrollTrigger removes the the intro text */}
+        <ScrollTrigger
+          onEnter={() => {
+            setState(prevState => ({ ...prevState, removeIntro: true })
+            )
+          }
+          }
+        />
         {recentWork}
 
         {/* Skills */}
