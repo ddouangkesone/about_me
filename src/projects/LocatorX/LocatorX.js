@@ -30,7 +30,7 @@ export default function LocatorX() {
         },
         {
           image: LX4,
-          label: 'Four Image'
+          label: 'Fourth Image'
         },
       ]
     }].map((element, index) => <RecentWorkThumbnails
@@ -59,7 +59,14 @@ export default function LocatorX() {
       </h2>
 
       {/* Description */}
-      <div className="w-50">
+      <div
+        className="w-70 mt3"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.8)', // White background with 90% opacity
+          padding: '3rem 1rem',
+          borderRadius: '8px'
+        }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
 

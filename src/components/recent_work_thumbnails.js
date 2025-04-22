@@ -10,28 +10,30 @@ export default function RecentWorkThumbnails(props) {
   const { inFocus } = state
   const thumbnails = fields.map((element, index) => {
     const { image, label: image_label, link = '' } = element
-    const fieldsContent = link ? <div key={index} className="w-third-l w-50-m w-100 pa3 mv2 h5">
-      <a
-        className="link dt hide-child br2 cover bg-center h-100 shadow-2 fade-in center w-100"
-        href={link}
-        rel='noreferrer noopener'
-        style={{ backgroundImage: `url(${image})` }}
-        target="_blank"
-      >
-        <span className="washed-green dtc v-mid child bg-black-40">
-          {image_label}
-        </span>
-      </a>
-    </div> : <div key={index} className="w-third-l w-50-m w-100 pa3 mv2 h5" onClick={() => { handleModal(image) }}>
-      <div
-        className={`link dt hide-child br2 cover bg-center h-100 shadow-2 fade-in center w-100`}
-        style={{ background: `url(${image})` }}
-      >
-        <span className="washed-green dtc v-mid child bg-black-40">
-          {image_label}
-        </span>
+    const fieldsContent = link
+      ? <div key={index} className="danfoo1 w-third-l w-50-m w-100 pa3 mv2 h5">
+        <a
+          className="link dt hide-child br2 cover bg-center h-100 shadow-2 fade-in center w-100"
+          href={link}
+          rel='noreferrer noopener'
+          style={{ backgroundImage: `url(${image})` }}
+          target="_blank"
+        >
+          <span className="washed-green dtc v-mid child bg-black-40">
+            {image_label}
+          </span>
+        </a>
       </div>
-    </div>
+      : <div key={index} className="danfoo2 w-third-l w-50-m w-100 pa3 mv2 h5" onClick={() => { handleModal(image) }}>
+        <div
+          className={`link dt hide-child br2 cover bg-center h-100 shadow-2 fade-in center w-100`}
+          style={{ background: `url(${image})` }}
+        >
+          <span className="washed-green dtc v-mid child bg-black-40">
+            {image_label}
+          </span>
+        </div>
+      </div>
 
     return fieldsContent
   })
