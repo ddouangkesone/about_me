@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-// import styled from 'styled-components'
-import ScrollTrigger from 'react-scroll-trigger';
-import Percentage from './components/Percentage';
-import Modal from './components/Modal';
-import SocialMedia from './components/social_media'
+import { useEffect, useState } from 'react';
 import DanielDouangkesone from './components/daniel_douangkesone';
+import Modal from './components/Modal';
+import Percentage from './components/Percentage';
 import RecentWorkThumbnails from './components/recent_work_thumbnails';
+import ScrollTrigger from 'react-scroll-trigger';
+import SocialMedia from './components/social_media'
 
 export default function App() {
   const [state, setState] = useState({
@@ -32,12 +31,6 @@ export default function App() {
 
   function handleModal(modalImage) {
     setState(prevState => ({ ...prevState, modalOpen: !modalOpen, modalImage }))
-  }
-
-  function escFunction(event) {
-    if (event.keyCode === 27) {
-      setState(prevState => ({ ...prevState, modalOpen: false }))
-    }
   }
 
   const recentWork = sections.map((element, index) => {
@@ -126,8 +119,7 @@ export default function App() {
         <div className="hello vh-75 flex flex-column justify-center f4">
           <h1 className="josefin mb4">About Me</h1>
           <span>
-            I'm a front end dev based out of New York City. I started taking freelance design jobs and
-            naturally progressed into web development. Making beautiful smart websites is my pride and passion.
+            I'm a Front-End Developer based in New York City with 6 years of experience building responsive, user-friendly web applications. I specialize in JavaScript, React, Redux, HTML, and CSS, and I genuinely love writing code—it's something I'm truly passionate about. I get excited about crafting clean, intuitive interfaces and bringing ideas to life through code. Whether it's fine-tuning a component or solving a tricky layout issue, I'm always up for the challenge.
           </span>
         </div>
 
@@ -144,12 +136,12 @@ export default function App() {
         {recentWork}
 
         {/* Skills */}
-        <div className="skills flex flex-column vh-75 flex flex-column justify-center f4">
+        {/* <div className="skills flex flex-column vh-75 flex flex-column justify-center f4">
           <div className="w-100 josefin mb4">
             <h1>Related Skills</h1>
           </div>
           {skillslist}
-        </div>
+        </div> */}
       </div>
 
       {/* Footer */}

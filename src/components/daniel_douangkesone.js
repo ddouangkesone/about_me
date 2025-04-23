@@ -7,6 +7,7 @@ import lost_pines from '../assets/lost_pines.jpg'
 import the_farm from '../assets/the_farm.jpg'
 import villa from '../assets/villa.jpg'
 import vince from '../assets/vince.jpg'
+import LX1 from "../assets/lx1.png"
 
 const DanielDouangkesone = {
   "name": "Daniel Douangkesone",
@@ -34,14 +35,15 @@ const DanielDouangkesone = {
       "label": "Recent Web Work",
       "fields": [
         {
+          image: LX1,
+          label: 'LocatorX',
+          link: '/projects/locatorx',
+          target: '_self'
+        },
+        {
           image: homecity,
           label: 'Homecity',
           link: 'https://www.homecity.com/'
-        },
-        {
-          image: villa,
-          label: 'Villa',
-          link: 'https://www.villarealestate.com/'
         },
         {
           image: vince,
