@@ -119,8 +119,7 @@ export default function App() {
         <div className="hello vh-75 flex flex-column justify-center f4">
           <h1 className="josefin mb4">About Me</h1>
           <span>
-            I'm a front end dev based out of New York City. I started taking freelance design jobs and
-            naturally progressed into web development. Making beautiful smart websites is my pride and passion.
+            I'm a Front-End Developer based in New York City with 6 years of experience building responsive, user-friendly web applications. I specialize in JavaScript, React, Redux, HTML, and CSS, and I genuinely love writing code—it's something I'm truly passionate about. I get excited about crafting clean, intuitive interfaces and bringing ideas to life through code. Whether it's fine-tuning a component or solving a tricky layout issue, I'm always up for the challenge.
           </span>
         </div>
 
@@ -137,12 +136,12 @@ export default function App() {
         {recentWork}
 
         {/* Skills */}
-        <div className="skills flex flex-column vh-75 flex flex-column justify-center f4">
+        {/* <div className="skills flex flex-column vh-75 flex flex-column justify-center f4">
           <div className="w-100 josefin mb4">
             <h1>Related Skills</h1>
           </div>
           {skillslist}
-        </div>
+        </div> */}
       </div>
 
       {/* Footer */}

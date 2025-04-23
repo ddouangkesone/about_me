@@ -18,19 +18,19 @@ export default function LocatorX() {
       fields: [
         {
           image: LX1,
-          label: 'First Image'
+          label: 'Console 1'
         },
         {
           image: LX2,
-          label: 'Second Image'
+          label: 'Console 2'
         },
         {
           image: LX3,
-          label: 'Third Image'
+          label: 'Console 3'
         },
         {
           image: LX4,
-          label: 'Fourth Image'
+          label: 'Console 4'
         },
       ]
     }].map((element, index) => <RecentWorkThumbnails
@@ -67,7 +67,7 @@ export default function LocatorX() {
           borderRadius: '8px'
         }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        A GPS-based asset tracking platform that empowers users to locate and manage tagged items in real time. I led the front-end development using React, Google Maps, Redux, and Material UI to create a responsive and intuitive user interface. The system communicates with back-end APIs to display live asset locations and status. Recently, I integrated Ollama AI to allow users to convert natural language queries into Elasticsearch-compatible searches, enhancing the platform’s usability and search functionality.
       </div>
 
       {/* Main Image section */}
