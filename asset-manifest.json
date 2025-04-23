@@ -1,22 +1,26 @@
 {
-  "main.css": "/about_me/static/css/main.177ae55e.chunk.css",
-  "main.js": "/about_me/static/js/main.cce7c5e6.chunk.js",
-  "main.js.map": "/about_me/static/js/main.cce7c5e6.chunk.js.map",
-  "static/js/1.57d1700f.chunk.js": "/about_me/static/js/1.57d1700f.chunk.js",
-  "static/js/1.57d1700f.chunk.js.map": "/about_me/static/js/1.57d1700f.chunk.js.map",
-  "runtime~main.js": "/about_me/static/js/runtime~main.edf6ed3a.js",
-  "runtime~main.js.map": "/about_me/static/js/runtime~main.edf6ed3a.js.map",
-  "static/media/bodega.jpg": "/about_me/static/media/bodega.eec2eb3a.jpg",
-  "static/media/fast_fridays.png": "/about_me/static/media/fast_fridays.01ced41d.png",
-  "static/media/lost_pines.jpg": "/about_me/static/media/lost_pines.6c920e5b.jpg",
-  "static/media/the_farm.jpg": "/about_me/static/media/the_farm.95ff278f.jpg",
-  "static/media/homecity.jpg": "/about_me/static/media/homecity.930a3dcf.jpg",
-  "static/media/villa.jpg": "/about_me/static/media/villa.4ae6a766.jpg",
-  "static/media/vince.jpg": "/about_me/static/media/vince.7789b0de.jpg",
-  "static/media/back.png": "/about_me/static/media/back.4003eec9.png",
-  "static/media/burn_alleycat.png": "/about_me/static/media/burn_alleycat.b43cf111.png",
-  "static/css/main.177ae55e.chunk.css.map": "/about_me/static/css/main.177ae55e.chunk.css.map",
-  "index.html": "/about_me/index.html",
-  "precache-manifest.31ebd92efa1d63ad32d91cabb4aa8249.js": "/about_me/precache-manifest.31ebd92efa1d63ad32d91cabb4aa8249.js",
-  "service-worker.js": "/about_me/service-worker.js"
+  "files": {
+    "main.css": "/about_me/static/css/main.c54b8911.css",
+    "main.js": "/about_me/static/js/main.008b1846.js",
+    "static/media/back.png": "/about_me/static/media/back.4e36f70e1817bfadb2fa.png",
+    "static/media/the_farm.jpg": "/about_me/static/media/the_farm.cb0f5d62977a75064383.jpg",
+    "static/media/lost_pines.jpg": "/about_me/static/media/lost_pines.0fd901c4dc5d3d4b0b47.jpg",
+    "static/media/fast_fridays.png": "/about_me/static/media/fast_fridays.c69e848a91e649924c15.png",
+    "static/media/bodega.jpg": "/about_me/static/media/bodega.b56515450132f9193870.jpg",
+    "static/media/lx2.png": "/about_me/static/media/lx2.abf68bf07556e6458e3b.png",
+    "static/media/lx4.png": "/about_me/static/media/lx4.03ac02dc9c1fd24ea67e.png",
+    "static/media/burn_alleycat.png": "/about_me/static/media/burn_alleycat.9ecf566e4327204c5d91.png",
+    "static/media/lx3.png": "/about_me/static/media/lx3.7515a067f3437123a816.png",
+    "static/media/villa.jpg": "/about_me/static/media/villa.7edd495242c9683ad2a3.jpg",
+    "static/media/homecity.jpg": "/about_me/static/media/homecity.8217b6f19c4031fd4583.jpg",
+    "static/media/vince.jpg": "/about_me/static/media/vince.bb0fa32d0c99f9ad0964.jpg",
+    "static/media/lx1.png": "/about_me/static/media/lx1.b61c5011c6aec486dab4.png",
+    "index.html": "/about_me/index.html",
+    "main.c54b8911.css.map": "/about_me/static/css/main.c54b8911.css.map",
+    "main.008b1846.js.map": "/about_me/static/js/main.008b1846.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c54b8911.css",
+    "static/js/main.008b1846.js"
+  ]
 }
