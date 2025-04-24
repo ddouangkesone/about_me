@@ -8,7 +8,7 @@ import LocatorX from './projects/LocatorX/LocatorX';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <BrowserRouter basename="/ddouangkesone.github.io">
+  <BrowserRouter basename="/about_me">
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/projects/locatorx" element={<LocatorX />} />
