@@ -27,7 +27,7 @@
     "prestart": "npm run css",
     "prebuild": "npm run css"
   },
-  "homepage": "http://ddouangkesone.github.io/about_me",
+  "homepage": "http://ddouangkesone.github.io/",
   "eslintConfig": {
     "extends": "react-app"
   },
