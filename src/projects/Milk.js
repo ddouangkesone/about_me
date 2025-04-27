@@ -2,6 +2,7 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import MilkPicture from "../assets/Milk.png"
 import RecentWorkThumbnails from "../components/recent_work_thumbnails";
+import { Link } from "react-router";
 
 export default function Milk() {
   const [modalState, setModalState] = useState({
@@ -56,6 +57,16 @@ export default function Milk() {
       {/* Main Image section */}
       <div className="w-50 text-center">
         {milkScreenshots}
+      </div>
+
+      {/* Go back home */}
+      <div className="flex justify-center items-center mt4">
+        <Link
+          className="button-3"
+          to="/"
+        >
+          Go back
+        </Link>
       </div>
     </div>
   )

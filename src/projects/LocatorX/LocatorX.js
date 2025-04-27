@@ -5,6 +5,7 @@ import LX1 from '../../assets/lx1.png';
 import LX2 from '../../assets/lx2.png';
 import LX3 from '../../assets/lx3.png';
 import LX4 from '../../assets/lx4.png';
+import { Link } from 'react-router';
 
 export default function LocatorX() {
   const [modalState, setModalState] = useState({
@@ -75,6 +76,18 @@ export default function LocatorX() {
 
         {/* Insert a main image here */}
         {consoleScreenshots}
+      </div>
+
+      {/* Go back home */}
+      <div className="flex justify-center items-center mt4">
+        <Link
+          className="button-3"
+          to="/"
+        >
+          Go back
+        </Link>
+
+
       </div>
     </div>
   )
