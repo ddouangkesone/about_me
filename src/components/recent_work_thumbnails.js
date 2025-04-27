@@ -48,7 +48,7 @@ export default function RecentWorkThumbnails(props) {
       <ScrollTrigger className="mt2" onEnter={() => {
         setState(prevState => ({ ...prevState, inFocus: true }))
       }}>
-        <div className="examples flex flex-wrap items-center flex-column-m flex-row-l f4">
+        <div className="examples flex flex-wrap items-center flex-column-m flex-row-l f4 justify-center">
           {inFocus ? thumbnails : null}
         </div>
       </ScrollTrigger>

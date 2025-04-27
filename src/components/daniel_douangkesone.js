@@ -5,9 +5,9 @@ import fast_fridays from '../assets/fast_fridays.png'
 import homecity from '../assets/homecity.jpg'
 import lost_pines from '../assets/lost_pines.jpg'
 import the_farm from '../assets/the_farm.jpg'
-import villa from '../assets/villa.jpg'
 import vince from '../assets/vince.jpg'
 import LX1 from "../assets/lx1.png"
+import Milk2 from "../assets/Milk2.webp"
 
 const DanielDouangkesone = {
   "name": "Daniel Douangkesone",
@@ -38,6 +38,12 @@ const DanielDouangkesone = {
           image: LX1,
           label: 'LocatorX',
           link: '/projects/locatorx',
+          target: '_self'
+        },
+        {
+          image: Milk2,
+          label: 'Milk',
+          link: '/projects/milk',
           target: '_self'
         },
         {
